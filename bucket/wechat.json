@@ -1,0 +1,27 @@
+{
+    "homepage": "https://pc.weixin.qq.com/",
+    "description": "Connecting a billion people with calls, chats, and more",
+    "version": "3.7.0",
+    "license": {
+        "identifier": "EULA",
+        "url": "https://weixin.qq.com/cgi-bin/readtemplate?lang=zh_CN&t=weixin_agreement&s=default"
+    },
+    "url": "https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z",
+    "hash": "a3f1354b25de8df8439bea44540fd41baca3a58c25dc1eafee7b41c972fffdbe",
+    "bin": "wechat.exe",
+    "shortcuts": [
+        [
+            "wechat.exe",
+            "微信"
+        ]
+    ],
+    "post_install": "Echo $dir\\`$R5 $dir\\`$_15_ $dir\\`$PLUGINSDIR | Remove-Item -Recurse",
+    "checkver": {
+        "url": "https://pc.weixin.qq.com",
+        "regex": "class=\"download-version\">([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z"
+    },
+    "notes": "We don't persist your WeChat data, they are still storaged in '%APPDATA%\\Tencent\\WeChat'."
+}

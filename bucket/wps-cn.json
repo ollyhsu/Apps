@@ -1,0 +1,32 @@
+{
+    "version": "11.1.0.11744",
+    "description": "Complete office suite.",
+    "homepage": "https://www.wps.cn",
+    "license": {
+        "identifier": "Freeware"
+    },
+    "url": "https://official-package.wpscdn.cn/wps/download/WPS_Setup_11744.exe",
+    "hash": "bb758b2f21ad3552ccf7c5e9742e2531a5a39a9bb89674a32e76d9ef557531bf",
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\$fname\"",
+        "Expand-7zipArchive \"$dir\\`$_11_\\`$EXEFILE\" -Switches '-t#'",
+        "Move-Item \"$dir\\`$_11_\\*.7z\" \"$dir\"",
+        "Remove-Item \"$dir\\*\" -Exclude '4.7z', '2.7z' -Recurse",
+        "Expand-7zipArchive \"$dir\\2.7z\" -ExtractDir 'CONTROL\\office6' -Removal",
+        "Expand-7zipArchive \"$dir\\4.7z\" -ExtractDir 'office6' -Removal"
+    ],
+    "bin": "wpsoffice.exe",
+    "shortcuts": [
+        [
+            "wpsoffice.exe",
+            "WPS Office"
+        ]
+    ],
+    "checkver": {
+        "url": "http://xiazai.sogou.com/detail/34/6/-3406222873872061787.html",
+        "regex": "([0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+)"
+    },
+    "autoupdate": {
+        "url": "https://official-package.wpscdn.cn/wps/download/WPS_Setup_$buildVersion.exe"
+    }
+}

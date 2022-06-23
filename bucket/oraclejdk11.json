@@ -1,0 +1,22 @@
+{
+    "description": "Oracle JDK 11",
+    "homepage": "https://www.oracle.com/technetwork/java/javase/overview/index.html",
+    "version": "11.0.2-9",
+    "license": "https://www.oracle.com/technetwork/java/javase/terms/license/javase-license.html",
+    "architecture": {
+        "64bit": {
+            "url": "https://repo.huaweicloud.com/java/jdk/11.0.2+9/jdk-11.0.2_windows-x64_bin.zip",
+            "hash": "f38976b64633920ed27821fbd80ca924ce55d51b88f4de1933cacc8beecc5a60"
+        }
+    },
+    "cookie": {
+        "oraclelicense": "accept-securebackup-cookie"
+    },
+    "extract_dir": "jdk-11.0.2",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir",
+        "CLASSPATH": ".;%JAVA_HOME%\\lib;%JAVA_HOME%\\lib\\tools.jar"
+    },
+    "notes": "Oracle JDK 11.0.2 is the latest version of JDK11 provided by HuaweiCloud mirror site, this application is no longer updated.\nIf you need a newer version of JDK please install OpenJDK."
+}
