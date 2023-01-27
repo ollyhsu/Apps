@@ -1,5 +1,5 @@
 {
-    "version": "11.0.0",
+    "version": "3.17.0",
     "description": "The official client for Alibaba's cloud dirve service",
     "homepage": "https://www.aliyundrive.com/",
     "license": {
@@ -7,7 +7,7 @@
         "url": "https://www.aliyundrive.com/protocol/service"
     },
     "url": "https://yunpan.aliyun.com/downloads/apps/desktop/aDrive.exe#/dl.7z",
-    "hash": "b9d4d43ab05690cf778cb3eafc814ff390208b65cb2c4a027618704f600655a8",
+    "hash": "sha512:aae78231593f15d9b172ab37760172f44149654046ce1f30b4b9a952f3c1c1de04c094896302565bdae86e7044dfd657194f0d0cc4bc167eb96b9e6d39c65c50",
     "post_install": [
         "@('$PLUGINSDIR', '$TEMP') | ForEach-Object {",
         "    Remove-Item \"$dir\\$_\" -Recurse -Force",
